@@ -67,39 +67,39 @@ int main(int argc, char** argv) {
     passive_wait(2.0);
 
 
-    
+    double h = 0.122;
+    double w = 0.0318;
+    double d = 0.0318;
+    double x = -0.343;
+    double z = 0.55;
+    double ox = 1.875;
+    double oy = 0.01;
+    double oz = 0.125;
+    Vector2 i_pos;
+    Vector3 size;
+    Vector3 o_pos;
+    vector2_set_values(&i_pos, x, z);
+    vector3_set_values(&size, h, w, d);
+    vector3_set_values(&o_pos, ox, oy, oz);
     
     int have_done = 0;
     while (true) {
         step();
         /* is there at least one packet in the receiver's queue ? */
-        if (wb_receiver_get_queue_length(receiver) > 0) {
-            /* read current packet's data */
-            const char* head = wb_receiver_get_data(receiver);
-            void* p = wb_receiver_next_packet(receiver);
-            Command* command = (Command*)p;
-            if (grasp_and_place(&command->i_pos, &command->size, &command->o_pos)) {
-                have_done++;
-                char message[128];
-                sprintf(message, "%d", have_done);
-                wb_emitter_send(emitter, message, strlen(message) + 1);
-            }
-        }
+        //if (wb_receiver_get_queue_length(receiver) > 0) {
+        //    /* read current packet's data */
+        //    const char* head = wb_receiver_get_data(receiver);
+        //    void* p = wb_receiver_next_packet(receiver);
+        //    Command* command = (Command*)p;
+        //    if (grasp_and_place(&command->i_pos, &command->size, &command->o_pos)) {
+        //        have_done++;
+        //        char message[128];
+        //        sprintf(message, "%d", have_done);
+        //        wb_emitter_send(emitter, message, strlen(message) + 1);
+        //    }
+        //}
 
-        //double h = 0.122;
-        //double w = 0.0318;
-        //double d = 0.0318;
-        //double x = -0.343;
-        //double z = 0.55;
-        //double ox = 1.875;
-        //double oy = 0.01;
-        //double oz = 0.125;
-        //Vector2 i_pos;
-        //Vector3 size;
-        //Vector3 o_pos;
-        //vector2_set_values(&i_pos, x, z);
-        //vector3_set_values(&size, h, w, d);
-        //vector3_set_values(&o_pos, ox, oy, oz);
+        
         //grasp_and_place(&i_pos, &size, &o_pos);
 
         //passive_wait(10.0);

@@ -8,7 +8,14 @@ Robot {
   children [
     Group {
       children [
+        Emitter {
+        }
+      ]
+    }
+    Group {
+      children [
         Receiver {
+          channel 2
         }
       ]
     }

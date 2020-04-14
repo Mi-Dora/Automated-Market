@@ -11,5 +11,5 @@ textFiles: 0 "worlds/market2.wbt"
 globalOptionalRendering: CameraFrustums
 renderingDevicePerspectives: youBot1:camera1;1;0.526;0;0
 renderingDevicePerspectives: youBot1:kinect color;1;1;0;0
-renderingDevicePerspectives: youBot:camera1;1;0.182;0.108983;0.0130902
 renderingDevicePerspectives: youBot1:kinect range;1;1;0;0
+renderingDevicePerspectives: youBot:camera1;1;0.182;0.108983;0.0130902
