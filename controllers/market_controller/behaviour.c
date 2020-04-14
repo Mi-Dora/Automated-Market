@@ -55,3 +55,7 @@ bool grasp_and_place(Vector2* i_pos, Vector3* size, Vector3* o_pos) {
 	backup(0.2);
 	return true;
 }
+
+bool grasp2_and_place(Vector2* i_pos, Vector3* size, Vector3* o_pos) {
+
+}

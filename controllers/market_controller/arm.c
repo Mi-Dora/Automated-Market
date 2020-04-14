@@ -80,6 +80,18 @@ void arm_set_height(enum Height height) {
         wb_motor_set_position(arm_elements[ARM4], -1.33);
         wb_motor_set_position(arm_elements[ARM5], 0.0);
         break;
+    case ARM_BACK_PLATE_VERTICAL_HIGH:
+        wb_motor_set_position(arm_elements[ARM2], 0.678);
+        wb_motor_set_position(arm_elements[ARM3], 0.682);
+        wb_motor_set_position(arm_elements[ARM4], 1.74);
+        wb_motor_set_position(arm_elements[ARM5], 0.0);
+        break;
+    case ARM_BACK_PLATE_VERTICAL_LOW:
+        wb_motor_set_position(arm_elements[ARM2], 0.92);
+        wb_motor_set_position(arm_elements[ARM3], 0.42);
+        wb_motor_set_position(arm_elements[ARM4], 1.78);
+        wb_motor_set_position(arm_elements[ARM5], 0.0);
+        break;
     case ARM_SHRINK1:
         wb_motor_set_position(arm_elements[ARM2], 0.5);
         wb_motor_set_position(arm_elements[ARM3], 2.55);
