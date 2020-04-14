@@ -1,2 +1,2 @@
 # Automated-Market
-Automated market replenishment implementing by Kuka Youbot and Mavic Pro
+Automated market replenishment implementing by Kuka Youbot and DJI Mavic Pro
