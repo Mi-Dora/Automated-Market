@@ -49,6 +49,10 @@ void struct_read_file(int n, Command* tk)
     while (!(fp = fopen(filename, "r")))
     {
         if (count == 0) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 48c4d1a3776ece54672ce3e8717d33af4cf6fe61
             printf("Waiting for task %d\n", n);
             count++;
         }
@@ -99,22 +103,9 @@ int main(int argc, char** argv) {
         step();
         int i = 1;
         Command* buf = (Command*)malloc(sizeof(Command));
-        char* filename[20];
-        for (int i = 1; i <= 4; i++) {
-            //sprintf(filename, "%d.txt", i);
-            //printf("%s", filename);
-            //while (access(filename, 0) != 0) {
-            //    if (print == 0) {
-            //        printf("Command waiting...\n");
-            //        print++;
-            //    }
-            //}
-            
-            //printf("Command received.\n");
 
-            /* read current packet's data */
+        for (int i = 1; i <= 4; i++) {
             struct_read_file(i, buf);
-            /* Command* command = (Command*)p;*/
             printf("ix = %f\n", buf->i_pos[0]);
             if (grasp_and_place(buf->i_pos, buf->size, buf->o_pos)) {
                 wait++;
