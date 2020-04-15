@@ -1,14 +1,14 @@
 ﻿  market_controller.c
 D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(46,10): warning C4101: “buf”: 未引用的局部变量
 D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(44,10): warning C4101: “c”: 未引用的局部变量
-D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(82,23): warning C4013: “wb_receiver_enable”未定义；假设外部返回 int
-D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(85,47): warning C4013: “wb_emitter_get_channel”未定义；假设外部返回 int
-D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(87,31): warning C4013: “wb_emitter_set_channel”未定义；假设外部返回 int
-D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(89,28): warning C4013: “wb_receiver_set_channel”未定义；假设外部返回 int
-D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(101,15): warning C4101: “filename”: 未引用的局部变量
+D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(83,23): warning C4013: “wb_receiver_enable”未定义；假设外部返回 int
+D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(86,47): warning C4013: “wb_emitter_get_channel”未定义；假设外部返回 int
+D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(88,31): warning C4013: “wb_emitter_set_channel”未定义；假设外部返回 int
+D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(90,28): warning C4013: “wb_receiver_set_channel”未定义；假设外部返回 int
+D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(102,15): warning C4101: “filename”: 未引用的局部变量
   正在生成代码
   2 of 53 functions ( 3.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    3 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   market_controller.vcxproj -> D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.exe

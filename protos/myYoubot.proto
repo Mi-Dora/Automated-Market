@@ -85,7 +85,7 @@ Robot {
             baseColor 0.8 0.8 0.8
             baseColorMap ImageTexture {
               url [
-                "D:/Mi-Dora/Source/Webots/supermarket2/protos/textures/kuka_alpha.png"
+                "D:/Git/Market_final/Automated-Market/protos/textures/kuka_alpha.png"
               ]
             }
             roughness 0.6
@@ -145,13 +145,13 @@ Robot {
               appearance PBRAppearance {
                 baseColorMap ImageTexture {
                   url [
-                    "D:/Program Files/Webots/projects/devices/microsoft/protos/textures/kinect.jpg"
+                    "D:/Webots2020/projects/devices/microsoft/protos/textures/kinect.jpg"
                   ]
                 }
                 roughness 0.1
                 roughnessMap ImageTexture {
                   url [
-                    "D:/Program Files/Webots/projects/devices/microsoft/protos/textures/kinect_roughness.jpg"
+                    "D:/Webots2020/projects/devices/microsoft/protos/textures/kinect_roughness.jpg"
                   ]
                 }
                 metalness 0
@@ -287,7 +287,7 @@ Robot {
                       baseColor 0.8 0.8 0.8
                       baseColorMap ImageTexture {
                         url [
-                          "D:/Mi-Dora/Source/Webots/supermarket2/protos/textures/kuka_black.png"
+                          "D:/Git/Market_final/Automated-Market/protos/textures/kuka_black.png"
                         ]
                       }
                       roughness 0.6
@@ -440,7 +440,7 @@ Robot {
                                   baseColor 0.8 0.8 0.8
                                   baseColorMap ImageTexture {
                                     url [
-                                      "D:/Mi-Dora/Source/Webots/supermarket2/protos/textures/kuka_black.png"
+                                      "D:/Git/Market_final/Automated-Market/protos/textures/kuka_black.png"
                                     ]
                                   }
                                   roughness 0.6
@@ -523,7 +523,7 @@ Robot {
                                         baseColor 0.8 0.8 0.8
                                         baseColorMap ImageTexture {
                                           url [
-                                            "D:/Mi-Dora/Source/Webots/supermarket2/protos/textures/kuka_black.png"
+                                            "D:/Git/Market_final/Automated-Market/protos/textures/kuka_black.png"
                                           ]
                                         }
                                         roughness 0.6

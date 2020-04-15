@@ -273,25 +273,25 @@ void bool2cor(Vector3* pos, int x, int y, int z)
         {
             x1 = 2.0 - 0.25 / 2.0;
             z1 = -0.875 + y * 0.25;
-            y1 = 0.1;
+            y1 = 0.01;
         }
         if (x == 2)
         {
             x1 = -2.0 + 0.25 / 2.0;
             z1 = -0.875 + y * 0.25;
-            y1 = 0.1;
+            y1 = 0.01;
         }
         if (x == 1)
         {
             z1 = 2.0 - 0.25 / 2.0;
             x1 = -0.875 + y * 0.25;
-            y1 = 0.2;
+            y1 = 0.01;
         }
         if (x == 3)
         {
             z1 = -2.0 + 0.25 / 2.0;
             x1 = -0.875 + y * 0.25;
-            y1 = 0.2;
+            y1 = 0.01;
         }
     }
     if (z == 1)
@@ -299,25 +299,25 @@ void bool2cor(Vector3* pos, int x, int y, int z)
         if (x == 0)
         {
             x1 = 2.0 - 0.25 / 2.0;
-            y1 = 0.4;
+            y1 = 0.21;
             z1 = -0.875 + y * 0.25;
         }
         if (x == 2)
         {
             z1 = -0.875 + y * 0.25;
-            y1 = 0.4;
+            y1 = 0.21;
             x1 = -2.0 + 0.25 / 2.0;
         }
         if (x == 1)
         {
             z1 = 2.0 - 0.25 / 2.0;
-            y1 = 0.6;
+            y1 = 0.41;
             x1 = -0.875 + y * 0.25;
         }
         if (x == 3)
         {
             z1 = -2.0 + 0.25 / 2.0;
-            y1 = 0.5;
+            y1 = 0.41;
             x1 = -0.875 + y * 0.25;
         }
     }
@@ -409,7 +409,9 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             //printf("%d \n", p->data->name);
             double i_position_x = p->data->id_gps_position[0];
             double i_position_z = p->data->id_gps_position[2];
-            region_judge = region_find(pos0, i_position_x, i_position_z, order);
+            double color_tag = p->data->color[0];
+            if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 && ((int)color_tag == 1))
+                region_judge = region_find(pos0, i_position_x, i_position_z, order);
             p = p->next;
         }
         if (order_height == 1)
@@ -422,7 +424,7 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             double i_position_x = p->data->id_gps_position[0];
             double i_position_z = p->data->id_gps_position[2];
             double color_tag = p->data->color[0];
-            if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 && (color_tag))      //wait for picking and it is red
+            if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 && ((int)color_tag == 1))      //wait for picking and it is red
             {
                 printf("WHY3\n");
                 for (int i1 = 0; i1 < 8; ++i1)        //judge the shelf
@@ -490,7 +492,9 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
         {
             double i_position_x = p->data->id_gps_position[0];
             double i_position_z = p->data->id_gps_position[2];
-            region_judge = region_find(pos0, i_position_x, i_position_z, order);
+            double color_tag_1 = p->data->color[0];
+            if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 && (((int)color_tag_1==1 && order_height == 1) || order_height == 0))
+                region_judge = region_find(pos0, i_position_x, i_position_z, order);
             p = p->next;
         }
         if (order_height == 1)
@@ -501,8 +505,8 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
         {
             double i_position_x = p->data->id_gps_position[0];
             double i_position_z = p->data->id_gps_position[2];
-            double color_tag_1 = p->data->color[0] + (double)order_height;
-            if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 && ((int)color_tag_1 == 2 || order_height == 0))      //wait for picking and it is red
+            double color_tag_1 = p->data->color[0];
+            if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 && (((int)color_tag_1 == 1 && order_height == 1) || order_height == 0))      //wait for picking and it is red
             {
                 for (int i1 = 0; i1 < 8; ++i1)        //judge the shelf
                 {
@@ -568,9 +572,14 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             //  printf("%d \n", p->data->name);
             double i_position_x = p->data->id_gps_position[0];
             double i_position_z = p->data->id_gps_position[2];
-            printf("The value of x: %f\n", i_position_x);
-            printf("The value of z: %f\n", i_position_z);
-            region_judge = region_find(pos0, i_position_x, i_position_z, order);
+          //  printf("The value of x: %f\n", i_position_x);
+          //  printf("The value of z: %f\n", i_position_z);
+            double color_tag_2 = p->data->color[0];
+            if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 &&
+                ((int)color_tag_2 == 0))
+            {
+                region_judge = region_find(pos0, i_position_x, i_position_z, order);
+            }
             p = p->next;
         }
         if (order_height == 1)
@@ -584,16 +593,16 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             double i_position_z = p->data->id_gps_position[2];
             double color_tag_2 = p->data->color[0];
             if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 &&
-                (((int)color_tag_2 == 0 && order_height == 1) || ((int)color_tag_2 == 0 && order_height == 0)))      //wait for picking and it is red
+                ((int)color_tag_2 == 0))      //wait for picking and it is red
             {
                 printf("WHY?_0\n");
                 for (int i1 = 0; i1 < 8; ++i1)        //judge the shelf
                 {
-                    judgement_existence = shelf_search(2, i1, order_height);
+                    judgement_existence = shelf_search(0, i1, order_height);
                     printf("The value of judgement_existence is: %d\n", judgement_existence);
                     if (!judgement_existence && !finish_C)       //empty
                     {
-                        bool2cor(pos1, 2, i1, order_height);//o_pos
+                        bool2cor(pos1, 0, i1, order_height);//o_pos
                         tk->o_pos[0] = pos1->u;
                         tk->o_pos[1] = pos1->v;
                         tk->o_pos[2] = pos1->w;
@@ -652,9 +661,11 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             p = h->head[1].next;   //jam jar
             while (p && !region_judge)
             {
+                
                 double i_position_x = p->data->id_gps_position[0];
                 double i_position_z = p->data->id_gps_position[2];
-                region_judge = region_find(pos0, i_position_x, i_position_z, order);
+                if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25)
+                    region_judge = region_find(pos0, i_position_x, i_position_z, order);
                 p = p->next;
             }
             p = h->head[1].next;
@@ -662,7 +673,7 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             {
                 double i_position_x = p->data->id_gps_position[0];
                 double i_position_z = p->data->id_gps_position[2];
-                if (i_position_x <= 1.25 && i_position_z <= 1.25)      //wait for picking and it is red
+                if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25)      //wait for picking and it is red
                 {
                     for (int i1 = 0; i1 < 8; ++i1)        //judge the shelf
                     {
@@ -702,7 +713,8 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
                 {
                     double i_position_x = p->data->id_gps_position[0];
                     double i_position_z = p->data->id_gps_position[2];
-                    region_judge = region_find(pos0, i_position_x, i_position_z, order);
+                    if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25)
+                        region_judge = region_find(pos0, i_position_x, i_position_z, order);
                     p = p->next;
                 }
                 p = h->head[4].next;
@@ -761,7 +773,8 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             {
                 double i_position_x = p->data->id_gps_position[0];
                 double i_position_z = p->data->id_gps_position[2];
-                region_judge = region_find(pos0, i_position_x, i_position_z, order);
+                if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25)
+                    region_judge = region_find(pos0, i_position_x, i_position_z, order);
                 p = p->next;
             }
             p = h->head[3].next;
@@ -770,14 +783,14 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
                 double i_position_x = p->data->id_gps_position[0];
                 double i_position_z = p->data->id_gps_position[2];
                 double color_tag_2 = p->data->color[0];
-                if (i_position_x <= 1.25 && i_position_z <= 1.25)      //wait for picking and it is red
+                if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25)      
                 {
                     for (int i1 = 0; i1 < 8; ++i1)        //judge the shelf
                     {
-                        judgement_existence = shelf_search(2, i1, order_height);
+                        judgement_existence = shelf_search(3, i1, order_height);
                         if (!judgement_existence && !finish_D)       //empty
                         {
-                            bool2cor(pos1, 2, i1, order_height);//o_pos
+                            bool2cor(pos1, 3, i1, order_height);//o_pos
                             tk->o_pos[0] = pos1->u;
                             tk->o_pos[1] = pos1->v;
                             tk->o_pos[2] = pos1->w;
@@ -1161,7 +1174,7 @@ int main(int argc, char** argv)
         {
             //char buf1[3][10] = { 0 };
             //char str[1000] = { 0 };
-            lookup4trans(idtable, &ob_list[0], 2, 0);
+            lookup4trans(idtable, &ob_list[0], 2, 1);
 
             //  printf("1: %f\n", ob_list[if_finish_tag - 1].i_pos[0]);
             //  printf("1: %f\n", ob_list[if_finish_tag - 1].i_pos[1]);
@@ -1191,14 +1204,14 @@ int main(int argc, char** argv)
         if (if_finish_tag == 3 && !f3)
         {
            // char buf3[100] = {0};
-            lookup4trans(idtable, &ob_list[if_finish_tag - 1], 0, 0);
+            lookup4trans(idtable, &ob_list[if_finish_tag - 1], 0, 1);
             f3 = true;
             struct_file_write(3, ob_list[2]);
         }
         if (if_finish_tag == 4 && !f4)
         {
            // char buf4[100] = {0};
-            lookup4trans(idtable, &ob_list[if_finish_tag - 1], 3, 1);
+            lookup4trans(idtable, &ob_list[if_finish_tag - 1], 3, 0);
             f4 = true;
             struct_file_write(4, ob_list[3]);
         }

@@ -48,10 +48,11 @@ void struct_read_file(int n, Command* tk)
     FILE* fp;
     while (!(fp = fopen(filename, "r")))
     {
-       // if (count == 0) {
+        if (count == 0) {
             printf("%s still not exists!\n", filename);
-          //  count++;
-       // }
+            count++;
+        }
+        step();
     }
     printf("%s found.\n", filename);
     fscanf(fp, "%lf %lf %lf %lf %lf %lf %lf %lf", 
@@ -117,10 +118,11 @@ int main(int argc, char** argv) {
             printf("ix = %f\n", buf->i_pos[0]);
             if (grasp_and_place(buf->i_pos, buf->size, buf->o_pos)) {
                 wait++;
-                i--;
+                
             }
             else {
                 perror("Grasp failed!\n");
+                i--;
             }
            
         }
