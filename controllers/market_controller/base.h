@@ -63,6 +63,7 @@ void base_goto_init(double time_step);
 void base_goto_set_target(double x, double z, double a);
 void base_goto_run();
 bool base_goto_reached();
+void base_set_turn_speed(double k);
 
 #ifdef __cplusplus
 }

@@ -1,6 +1,13 @@
-﻿  base.c
-D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\base.c(97,33): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
-D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\base.c(99,41): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+﻿  navigate.c
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(290,18): warning C4098: 'go_to_point': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(294,18): warning C4098: 'go_to_point': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(316,17): warning C4098: 'go_to_point': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(344,13): warning C4098: 'go_to_point': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(359,18): warning C4098: 'go_to_translation': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(363,18): warning C4098: 'go_to_translation': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(399,17): warning C4098: 'go_to_translation': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(441,36): warning C4552: '-': result of expression not used
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(460,18): warning C4098: 'approach': 'void' function returning a value
   Generating code
   1 of 53 functions ( 1.9%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation

@@ -11,7 +11,7 @@ WorldInfo {
       coulombFriction [
         1.8, 0, 0.2
       ]
-      frictionRotation -0.665 0
+      frictionRotation -0.865 0
       bounce 0
       forceDependentSlip [
         10, 0
@@ -22,7 +22,7 @@ WorldInfo {
       coulombFriction [
         1.8, 0, 0.2
       ]
-      frictionRotation 0.665 0
+      frictionRotation 0.865 0
       bounce 0
       forceDependentSlip [
         10, 0
@@ -35,6 +35,7 @@ Viewpoint {
   position 0.6047123660989927 4.857177146191939 -2.984750685993605
   near 0.2
   follow "Mavic 2 PRO:Pioneer3 gripper"
+  followType "None"
   followSmoothness 0.2
 }
 Background {
@@ -5264,8 +5265,8 @@ Robot {
                                     }
                                   ]
                                   endPoint DEF GRIPPER_BASE Solid {
-                                    translation 9.609509991390072e-08 -1.648730050182105e-08 0.07
-                                    rotation 0.7071067830325426 0.70710677933993 9.381857062146536e-07 3.14159
+                                    translation 9.609509991390081e-08 -1.6487300501821067e-08 0.07
+                                    rotation 0.7071067830325426 0.7071067793399302 9.381857062146536e-07 3.14159
                                     children [
                                       DEF LIFT_SLIDER SliderJoint {
                                         jointParameters JointParameters {
