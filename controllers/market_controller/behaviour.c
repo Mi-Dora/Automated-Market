@@ -5,6 +5,8 @@ Email : yuduseu@gmail.com
 Last edit date :
 */
 
+
+/*top layer of youbot control*/
 #include <webots/keyboard.h>
 #include <webots/robot.h>
 #include <webots/motor.h>
@@ -24,11 +26,18 @@ Last edit date :
 #include <stdlib.h>
 #include <string.h>
 
+// defined for status
 #define PLATEFORM 1
 #define SHELF -1
 
 
+/*grasp only one good at one time*/
 bool grasp_and_place(Vector2* i_pos, Vector3* size, Vector3* o_pos) {
+	/*Input:
+		i_pos: coordinate of goods position (x, z) (input position)
+		size: height, width, depth of the goods of grasp
+		o_pos: coordinate of goods position (x, y, z) £¨output position£©
+	*/
 	double ix = i_pos->u;
 	double iz = i_pos->v;
 	double h = size->u;

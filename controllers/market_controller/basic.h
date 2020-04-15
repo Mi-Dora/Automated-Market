@@ -21,8 +21,8 @@ extern "C" {
 #include <webots/robot.h>
 #include <webots/motor.h>
 
-#define TIME_STEP 32
-#define TIME_STEP_CAM 32
+#define TIME_STEP 16
+#define TIME_STEP_CAM 16
 
 #define DIS_ARM_OBJ 0.2
 #define DIS_APPROACH 0.3 

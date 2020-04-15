@@ -38,6 +38,7 @@ void go_to(double x, double z, double a) {
     while (!base_goto_reached()) {
         base_goto_run();
         step();
+        step();
     }
     base_reset();
 }
@@ -487,30 +488,7 @@ void backup(double distance) {
     double ix = rx;
     double iz = rz;
 
-    //int rbt_partition = get_partition(rx, rz);
-    //if (rbt_partition == -1) {
-    //    perror("Invalid robot partition!\n");
-    //    return -1;
-    //}
-
- /*   double alpha = 0.0;
-    if (rbt_partition == 0) {
-        ox -= distance;
-    }
-    else if (rbt_partition == 1) {
-        oz -= distance;
-    }
-    else if (rbt_partition == 2) {
-        ox += distance;
-    }
-    else if (rbt_partition == 3) {
-        oz += distance;
-    }*/
-
     base_backwards();
-    //for (int i = 0; i < 100; i++) {
-    //    step();
-    //}
     double dis;
     do {
         step();
