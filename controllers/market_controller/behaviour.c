@@ -38,14 +38,6 @@ bool grasp_and_place(double* i_pos, double* size, double* o_pos) {
 		size: height, width, depth of the goods of grasp
 		o_pos: coordinate of goods position (x, y, z) £¨output position£©
 	*/
-	//double ix = i_pos->u;
-	//double iz = i_pos->v;
-	//double h = size->u;
-	//double w = size->v;
-	//double d = size->w; // depth
-	//double ox = o_pos->u;
-	//double oy = o_pos->v;
-	//double oz = o_pos->w;
 	double ix = i_pos[0];
 	double iz = i_pos[1];
 	double h = size[0];
