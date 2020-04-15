@@ -37,7 +37,25 @@ static WbDeviceTag cam[2], receiver, emitter;
 unsigned short width, height;
 static double distance_arm0_platform = DIS_ARM_OBJ;
 
+void struct_read_file(int n, Command tk)
+{
+    int count = 0;
+    char c;
+    char filename[10];
+    char buf[50];
+    snprintf(filename, sizeof(filename), "D:\\Git\\Market\\controllers\\%d.txt", n);
+    FILE* fp = fopen(filename, "r");
+    if (!fp)
+    {
+        printf("The file not exists!\n");
+        exit(-1);
+    }
+    fscanf(fp, "%s %s %s", tk.i_pos, tk.size, tk.o_pos);
+    //printf("%f %f %f %f %f %f %f %f\n", tk.i_pos[0], tk.i_pos[1], tk.i_size[0], tk.i_size[1], tk.i_size[2], tk.o_pos[0], tk.o_pos[1], tk.o_pos[2]);
 
+    fclose(fp);
+
+}
 
 int main(int argc, char** argv) {
     wb_robot_init();
@@ -85,25 +103,30 @@ int main(int argc, char** argv) {
     int wait = 1;
     while (true) {
         step();
-
+ /*       Command* buf = (Command*)malloc(sizeof(Command));
         if (print == 0) {
             printf("Command waiting...\n");
             print++;
         }
         if (wb_receiver_get_queue_length(receiver) > 0) {
-            printf("Command received.\n");
+            printf("Command received.\n");*/
             /* read current packet's data */
-            const char* head = wb_receiver_get_data(receiver);
-            void* p = wb_receiver_next_packet(receiver);
-            Command* command = (Command*)p;
-            if (grasp_and_place(&command->i_pos, &command->size, &command->o_pos)) {
-                wait++;
-            }
-            else {
-                perror("Grasp failed!\n");
-            }
-        }
-
+           // const char* message = wb_receiver_get_data(receiver);
+           // void* p = wb_receiver_next_packet(receiver);
+          //  printf("the str is: %s\n", message);
+         //   memcpy(buf,message,sizeof(Command));
+          //  printf("the value is: %f\n", buf.i_pos[0]);
+          //  printf("The values is %s\n", message);
+           /* Command* command = (Command*)p;*/
+            //if (grasp_and_place(&buf->i_pos, &buf->size, &buf->o_pos)) {
+            //    wait++;
+            //}
+            //else {
+            //    perror("Grasp failed!\n");
+            //}
+           // wb_receiver_next_packet(receiver);
+        //}
+        //free(buf);
 
 
         //grasp_and_place(&i_pos, &size, &o_pos);

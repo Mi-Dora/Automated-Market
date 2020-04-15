@@ -1,7 +1,7 @@
 ﻿  mavic_pro.c
-  Generating code
-  3 of 22 functions (13.6%) were compiled, the rest were copied from previous compilation.
+  正在生成代码
+  2 of 25 functions ( 8.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    4 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  mavic_pro.vcxproj -> D:\Mi-Dora\Source\Webots\Automated-Market\controllers\Mavic_controller\mavic_pro.exe
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  mavic_pro.vcxproj -> D:\Git\Market\controllers\Mavic_controller\mavic_pro.exe

@@ -1,6 +1,17 @@
-﻿  Generating code
-  4 of 47 functions ( 8.5%) were compiled, the rest were copied from previous compilation.
+﻿  market_controller.c
+D:\Git\Market\controllers\market_controller\market_controller.c(58,23): warning C4013: “wb_receiver_enable”未定义；假设外部返回 int
+D:\Git\Market\controllers\market_controller\market_controller.c(61,47): warning C4013: “wb_emitter_get_channel”未定义；假设外部返回 int
+D:\Git\Market\controllers\market_controller\market_controller.c(63,31): warning C4013: “wb_emitter_set_channel”未定义；假设外部返回 int
+D:\Git\Market\controllers\market_controller\market_controller.c(65,28): warning C4013: “wb_receiver_set_channel”未定义；假设外部返回 int
+D:\Git\Market\controllers\market_controller\market_controller.c(93,41): warning C4013: “wb_receiver_get_queue_length”未定义；假设外部返回 int
+D:\Git\Market\controllers\market_controller\market_controller.c(96,55): warning C4013: “wb_receiver_get_data”未定义；假设外部返回 int
+D:\Git\Market\controllers\market_controller\market_controller.c(103,44): warning C4133: “函数”: 从“Vector3 *”到“Vector2 *”的类型不兼容
+D:\Git\Market\controllers\market_controller\market_controller.c(103,56): warning C4133: “函数”: 从“Vector2 *”到“Vector3 *”的类型不兼容
+D:\Git\Market\controllers\market_controller\market_controller.c(109,36): warning C4013: “wb_receiver_next_packet”未定义；假设外部返回 int
+D:\Git\Market\controllers\market_controller\market_controller.c(96,1): warning C4047: “初始化”:“const char *”与“int”的间接级别不同
+  正在生成代码
+  1 of 47 functions ( 2.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     2 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  market_controller.vcxproj -> D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\market_controller.exe
+  已完成代码的生成
+  market_controller.vcxproj -> D:\Git\Market\controllers\market_controller\market_controller.exe

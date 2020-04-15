@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 #include <webots/robot.h>
 #include <webots/camera.h>
@@ -88,7 +89,7 @@ static WbDeviceTag camera_motor[3];
 static WbDeviceTag motors[4];
 static WbDeviceTag emitter;
 static WbDeviceTag receiver;
-
+static SnedBuff[300] = { 0 };
 
 /*-----------------------------------------------parameter used------------------------------------------------------*/
 static const double k_vertical_thrust = 68.5;  // with this thrust, the drone lifts.
@@ -131,6 +132,25 @@ static int run;
 static double initializelist[7][3] = { {0.143,0.031,0.031},{0.115,0.045,0.045},
     {0.122,0.0318,0.0318},{0.31,0.044,0.044},{0.115,0.045,0.045},
     {0.3,0.08,0.2},{0.18,0.14,0.08} };
+
+void struct_file_write(int n, Trans2Youbot tk)
+{
+    char filename[10];
+    snprintf(filename, sizeof(filename), "D:\\Git\\Market\\controllers\\%d.txt", n);
+    FILE* fp = fopen(filename, "w");
+    if (!fp)
+    {
+        printf("fail to open the file!\n");
+        exit(-1);
+    }
+    fprintf(fp,"%f %f ", tk.i_pos[0],tk.i_pos[1]);
+    //fprintf(fp, "\n");
+    fprintf(fp, "%f %f %f ", tk.i_size[0], tk.i_size[1], tk.i_size[2]);
+    //fprintf(fp, "\n");
+    fprintf(fp, "%f %f %f", tk.o_pos[0], tk.o_pos[1], tk.o_pos[2]);
+    //fprintf(fp, "\n");
+    fclose(fp);
+}
 
 /*--------------------------------------------------shelf list------------------------------------------------------*/
 //1. region(4)
@@ -1139,32 +1159,48 @@ int main(int argc, char** argv)
         /*-------------------------------------------------------------------------------------*/
         if (if_finish_tag == 1 && !f1)
         {
+            //char buf1[3][10] = { 0 };
+            //char str[1000] = { 0 };
             lookup4trans(idtable, &ob_list[0], 2, 0);
+
             //  printf("1: %f\n", ob_list[if_finish_tag - 1].i_pos[0]);
             //  printf("1: %f\n", ob_list[if_finish_tag - 1].i_pos[1]);
             //  printf("1: %f\n", ob_list[if_finish_tag - 1].o_pos[2]);
             //  printf("1: %f\n", ob_list[if_finish_tag - 1].o_pos[1]);
             f1 = true;
+            struct_file_write(2, ob_list[0]);
+           // int stri;
+          //  for (stri = 0; stri < 2; ++stri)
+          //  {
+           //     sprintf(str + strlen(str), "%f,", ob_list[0].i_pos[stri]);
+           // }
+           // _gcvt(ob_list[0].i_pos[0], 6, buf1);
+          //  memcpy(buf1, &ob_list[0],sizeof(Trans2Youbot));
+          //  printf("the str is %s\n", str);
+          //  const char* str_test = "Hello!";
             //  Trans2Youbot we = { {0.2,0.2},{0.2,0.1,0.05},{-0.2,0.1,0.3} };
-            wb_emitter_send(emitter, &ob_list[if_finish_tag - 1], sizeof(Trans2Youbot));
+           // wb_emitter_send(emitter, str_test, strlen(str_test)+1);
         }
         if (if_finish_tag == 2 && !f2)
         {
+           // char buf2[100] = {0};
             lookup4trans(idtable, &ob_list[if_finish_tag - 1], 1, 1);
             f2 = true;
-            wb_emitter_send(emitter, &ob_list[if_finish_tag - 1], sizeof(Trans2Youbot));
+            struct_file_write(2, ob_list[1]);
         }
         if (if_finish_tag == 3 && !f3)
         {
+           // char buf3[100] = {0};
             lookup4trans(idtable, &ob_list[if_finish_tag - 1], 0, 0);
             f3 = true;
-            wb_emitter_send(emitter, &ob_list[if_finish_tag - 1], sizeof(Trans2Youbot));
+            struct_file_write(3, ob_list[2]);
         }
         if (if_finish_tag == 4 && !f4)
         {
+           // char buf4[100] = {0};
             lookup4trans(idtable, &ob_list[if_finish_tag - 1], 3, 1);
             f4 = true;
-            wb_emitter_send(emitter, &ob_list[if_finish_tag - 1], sizeof(Trans2Youbot));
+            struct_file_write(4, ob_list[3]);
         }
         //set necessary parameters to help controlling
         //control the drone
