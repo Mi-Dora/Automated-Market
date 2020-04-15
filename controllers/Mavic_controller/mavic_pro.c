@@ -35,7 +35,7 @@
 #define EMIT_CHANNEL 8
 #define RECEIVE_CHANNEL 9
 
-typedef struct trans2youbot
+typedef struct trans
 {
     double i_pos[2];
     double i_size[3];   //height, width, depth
@@ -242,7 +242,7 @@ bool shelf_search(int x, int y, int z)
 
 /*bool to gps position function*/
 
-void bool2cor(Vector3 *pos, int x, int y, int z)
+void bool2cor(Vector3* pos, int x, int y, int z)
 {
     double x1 = 0.0;
     double y1 = 0.0;
@@ -359,7 +359,7 @@ bool region_find(Vector2* p, double x, double z, int r)
 {
     bool judge = false;
     int re = region(x, z);
-    if ((re == 0 && r == 2) || (re == 1 && r == 1) || (re ==2 && r == 0) || (re == 3 && r == 3))
+    if ((re == 0 && r == 2) || (re == 1 && r == 1) || (re == 2 && r == 0) || (re == 3 && r == 3))
     {
         p->u = x;
         p->v = z;
@@ -375,12 +375,12 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
     if (order == 2)             //red bisuit box(7) + red can(3)
     {
         bool region_judge = false;
-        Vector2* pos0= (Vector2*)malloc(sizeof(Vector2));
+        Vector2* pos0 = (Vector2*)malloc(sizeof(Vector2));
         Node* p = (Node*)malloc(sizeof(Node));
         p->data = (IDlist*)malloc(sizeof(IDlist));
-        if(order_height == 1)
+        if (order_height == 1)
             p = h->head[6].next;   //biscuit box
-        if(order_height == 0)
+        if (order_height == 0)
             p = h->head[2].next;   //red can
 
         while (p && !region_judge)
@@ -447,14 +447,14 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             p = p->next;
         }
 
-     //   free(p->data);
-      //  p->data = NULL;
-     //   free(p);
-     //   p = NULL;
+        //   free(p->data);
+         //  p->data = NULL;
+        //   free(p);
+        //   p = NULL;
         free(pos0);
         pos0 = NULL;
-     //   free(pos1);
-     //   pos1 = NULL;
+        //   free(pos1);
+        //   pos1 = NULL;
     }
     if (order == 1)            // red cereal box(6) + beer bottle(1)
     {
@@ -481,7 +481,7 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
         {
             double i_position_x = p->data->id_gps_position[0];
             double i_position_z = p->data->id_gps_position[2];
-            double color_tag_1 = p->data->color[0] + (double)order_height;         
+            double color_tag_1 = p->data->color[0] + (double)order_height;
             if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 && ((int)color_tag_1 == 2 || order_height == 0))      //wait for picking and it is red
             {
                 for (int i1 = 0; i1 < 8; ++i1)        //judge the shelf
@@ -502,7 +502,7 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
                             if (!order_height)
                             {
                                 tk->i_size[k2] = initializelist[0][k2];
-                            }                          
+                            }
                         }
                         if (region_judge)
                         {
@@ -523,19 +523,19 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             }
             p = p->next;
         }
-     //   free(p->data);
-     //   p->data = NULL;
-     //   free(p);
-     //   p = NULL;
+        //   free(p->data);
+        //   p->data = NULL;
+        //   free(p);
+        //   p = NULL;
         free(pos0);
         pos0 = NULL;
-      //  free(pos1);
-     //   pos1 = NULL;
+        //  free(pos1);
+       //   pos1 = NULL;
     }
     if (order == 0)            // blue cereal box(6) + green can(3)
     {
         bool region_judge = false;
-       // Vector2* pos0 = NULL;
+        // Vector2* pos0 = NULL;
         Vector2* pos0 = (Vector2*)malloc(sizeof(Vector2));
         Node* p = (Node*)malloc(sizeof(Node));
         p->data = (IDlist*)malloc(sizeof(IDlist));
@@ -545,7 +545,7 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             p = h->head[2].next;   //can
         while (p && !region_judge)
         {
-          //  printf("%d \n", p->data->name);
+            //  printf("%d \n", p->data->name);
             double i_position_x = p->data->id_gps_position[0];
             double i_position_z = p->data->id_gps_position[2];
             printf("The value of x: %f\n", i_position_x);
@@ -563,7 +563,7 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
             double i_position_x = p->data->id_gps_position[0];
             double i_position_z = p->data->id_gps_position[2];
             double color_tag_2 = p->data->color[0];
-            if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 && 
+            if (fabs(i_position_x) <= 1.25 && fabs(i_position_z) <= 1.25 &&
                 (((int)color_tag_2 == 0 && order_height == 1) || ((int)color_tag_2 == 0 && order_height == 0)))      //wait for picking and it is red
             {
                 printf("WHY?_0\n");
@@ -588,10 +588,10 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
                                 tk->i_size[k2] = initializelist[2][k2];
                             }
                         }
-                      //  printf("The size is: %f\n", tk->i_size[1]);
+                        //  printf("The size is: %f\n", tk->i_size[1]);
                         if (region_judge)
                         {
-                           // printf("The value of region_judge is: %d\n", region_judge);
+                            // printf("The value of region_judge is: %d\n", region_judge);
                             tk->i_pos[0] = pos0->u;
                             tk->i_pos[1] = pos0->v;
                             finish_C = true;
@@ -617,8 +617,8 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
     //    p = NULL;
         free(pos0);
         pos0 = NULL;
-     //   free(pos1);
-    //    pos1 = NULL;
+        //   free(pos1);
+       //    pos1 = NULL;
     }
     if (order == 3)            // jam jar(2) + honey jar(5)   +   water bottle(4)
     {
@@ -725,14 +725,14 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
                 }
             }
 
-        //    free(p->data);
-        //    p->data = NULL;
-        //    free(p);
-        //    p = NULL;
-        //    free(pos0);
-        //    pos0 = NULL;
-         //   free(pos1);
-         //   pos1 = NULL;
+            //    free(p->data);
+            //    p->data = NULL;
+            //    free(p);
+            //    p = NULL;
+            //    free(pos0);
+            //    pos0 = NULL;
+             //   free(pos1);
+             //   pos1 = NULL;
         }
         if (order_height == 0)
         {
@@ -783,21 +783,21 @@ void lookup4trans(Hash_table* h, Trans2Youbot* tk, int order, int order_height)
                 p = p->next;
             }
 
-         //   free(p->data);
-         //   p->data = NULL;
-         //   free(p);
-         //   p = NULL;
-         //   free(pos0);
-        //    pos0 = NULL;
-         //   free(pos1);
-         //   pos1 = NULL;
+            //   free(p->data);
+            //   p->data = NULL;
+            //   free(p);
+            //   p = NULL;
+            //   free(pos0);
+           //    pos0 = NULL;
+            //   free(pos1);
+            //   pos1 = NULL;
         }
         free(pos0);
         pos0 = NULL;
     }
     free(pos1);
     pos1 = NULL;
-   // printf("remain: %f\n", tk->i_size[1]);
+    // printf("remain: %f\n", tk->i_size[1]);
 }
 
 /*-----------------------------------------------hash table funcion-------------------------------------------------*/
@@ -1140,12 +1140,13 @@ int main(int argc, char** argv)
         if (if_finish_tag == 1 && !f1)
         {
             lookup4trans(idtable, &ob_list[0], 2, 0);
-            printf("1: %f\n", ob_list[if_finish_tag - 1].i_pos[0]);
-            printf("1: %f\n", ob_list[if_finish_tag - 1].i_pos[1]);
-          //  printf("1: %f\n", ob_list[if_finish_tag - 1].o_pos[2]);
-          //  printf("1: %f\n", ob_list[if_finish_tag - 1].o_pos[1]);
+            //  printf("1: %f\n", ob_list[if_finish_tag - 1].i_pos[0]);
+            //  printf("1: %f\n", ob_list[if_finish_tag - 1].i_pos[1]);
+            //  printf("1: %f\n", ob_list[if_finish_tag - 1].o_pos[2]);
+            //  printf("1: %f\n", ob_list[if_finish_tag - 1].o_pos[1]);
             f1 = true;
-            wb_emitter_send(emitter, &ob_list[0], 8 * sizeof(double));
+            //  Trans2Youbot we = { {0.2,0.2},{0.2,0.1,0.05},{-0.2,0.1,0.3} };
+            wb_emitter_send(emitter, &ob_list[if_finish_tag - 1], sizeof(Trans2Youbot));
         }
         if (if_finish_tag == 2 && !f2)
         {
