@@ -131,8 +131,8 @@ void arm_set_height(enum Height height) {
         break;
     case ARM_SHELF_HIGH:
         wb_motor_set_position(arm_elements[ARM2], 0.0);
-        wb_motor_set_position(arm_elements[ARM3], 0.0);
-        wb_motor_set_position(arm_elements[ARM4], -1.6);
+        wb_motor_set_position(arm_elements[ARM3], -0.3);
+        wb_motor_set_position(arm_elements[ARM4], -1.25);
         wb_motor_set_position(arm_elements[ARM5], 0.0);
         break;
     case ARM_SHELF_MIDDLE:

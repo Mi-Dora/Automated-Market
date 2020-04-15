@@ -26,7 +26,7 @@ extern "C" {
 
 #define DIS_ARM_OBJ 0.2
 #define DIS_APPROACH 0.3 
-#define HEIGHT_THRESH 0.17
+#define HEIGHT_THRESH 0.181
 #define H_SHELF_PLATE 0.01
 
 

@@ -248,5 +248,30 @@ bool grasp_shelf(double h, double y) {
 }
 
 
+bool put_bottle_back(double w, double h, int shelfid) {
+    grasp_hold(w);
+    double offset = 0.0;
 
+    if (storage[0] || storage[1] || storage[2]) {
+        printf("Back plate is full! Keep holding!\n");
+        return false;
+    }
+    offset = BACK_HEIGHT - (h - INIT_GRIPPER_HEIGHT);
+    gripper_set_height(offset);
+    arm_set_orientation(ARM_FRONT);
+    arm_set_height(ARM_BACK_PLATE_VERTICAL_HIGH);
+    passive_wait(4.0);
+    gripper_release();
+    passive_wait(1.0);
+    arm_set_height(ARM_SHRINK1);
+    passive_wait(1.5);
+    arm_set_height(ARM_SHRINK2);
+    passive_wait(1.5);
+    arm_set_height(ARM_GRASP_HORIZONTAL);
+    gripper_set_height(0.0);
+    storage[1] = true;
+    storage_size[1][0] = w;
+    storage_size[1][1] = h;
+    shelf[1] = shelfid;
+}
 

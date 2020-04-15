@@ -54,6 +54,8 @@ bool grasp_shelf(double h, double y);
 
 bool back_to_hold(int shelfid);
 
+bool put_bottle_back(double w, double h, int shelfid);
+
 
 #ifdef __cplusplus
 }

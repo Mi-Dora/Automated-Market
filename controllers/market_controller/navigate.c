@@ -357,7 +357,7 @@ void go_to_translation(double ox, double oz, int status) {
     double alpha = 0.0;
     if (obj_partition == 0) {
         if (status == 1)
-            alpha = status * M_PI;
+            alpha = -M_PI;
         else
             alpha = 0;
         ox += status * (offset + DIS_APPROACH);
@@ -373,7 +373,7 @@ void go_to_translation(double ox, double oz, int status) {
         if (status == 1)
             alpha = 0;
         else
-            alpha = M_PI;
+            alpha = -M_PI;
         ox -= status * (offset + DIS_APPROACH);
 
     }
@@ -446,7 +446,7 @@ void approach(double depth, double height, int status) {
         return -1;
     }
     if (status == -1) {
-        offset += 0.15;
+        offset += 0.18;
         if (depth <= 0.1)
             offset -= 0.04;
     }
@@ -476,7 +476,7 @@ void approach(double depth, double height, int status) {
     }
     printf("rx = %f\t rz = %f\n", rx, rz);
     printf("ox = %f\t oz = %f\n", ox, oz);
-    go_to(ox, oz, alpha);
+    go_to(ox, oz, cur_alpha);
 }
 
 void backup(double distance) {

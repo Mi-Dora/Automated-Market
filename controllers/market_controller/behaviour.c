@@ -32,20 +32,29 @@ Last edit date :
 
 
 /*grasp only one good at one time*/
-bool grasp_and_place(Vector2* i_pos, Vector3* size, Vector3* o_pos) {
+bool grasp_and_place(double* i_pos, double* size, double* o_pos) {
 	/*Input:
 		i_pos: coordinate of goods position (x, z) (input position)
 		size: height, width, depth of the goods of grasp
 		o_pos: coordinate of goods position (x, y, z) £¨output position£©
 	*/
-	double ix = i_pos->u;
-	double iz = i_pos->v;
-	double h = size->u;
-	double w = size->v;
-	double d = size->w; // depth
-	double ox = o_pos->u;
-	double oy = o_pos->v;
-	double oz = o_pos->w;
+	//double ix = i_pos->u;
+	//double iz = i_pos->v;
+	//double h = size->u;
+	//double w = size->v;
+	//double d = size->w; // depth
+	//double ox = o_pos->u;
+	//double oy = o_pos->v;
+	//double oz = o_pos->w;
+	double ix = i_pos[0];
+	double iz = i_pos[1];
+	double h = size[0];
+	double w = size[1];
+	double d = size[2]; // depth
+	double ox = o_pos[0];
+	double oy = o_pos[1];
+	double oz = o_pos[2];
+
 	grasp_hold(-0.1);
     go_to_translation(ix, iz, PLATEFORM);
 	grasp_prepare(h, w);
@@ -65,6 +74,32 @@ bool grasp_and_place(Vector2* i_pos, Vector3* size, Vector3* o_pos) {
 	return true;
 }
 
-bool grasp2_and_place(Vector2* i_pos, Vector3* size, Vector3* o_pos) {
+bool grasp2_and_place(double* i_pos, double* size, double* o_pos) {
+	double ix = i_pos[0];
+	double iz = i_pos[1];
+	double h = size[0];
+	double w = size[1];
+	double d = size[2]; // depth
+	double ox = o_pos[0];
+	double oy = o_pos[1];
+	double oz = o_pos[2];
 
+	grasp_hold(-0.1);
+	go_to_translation(ix, iz, PLATEFORM);
+	grasp_prepare(h, w);
+	passive_wait(3.0);
+	approach(d, h, PLATEFORM);
+	//grasp_hold(w);
+	put_to_back(w, h, 3);
+
+	go_to_translation(ox, oz, SHELF);
+	//set place posture
+	if (!grasp_shelf(h, oy))
+		return false;
+
+	approach(d, h, SHELF);
+	gripper_release();
+	passive_wait(1.0);
+	backup(0.2);
+	return true;
 }

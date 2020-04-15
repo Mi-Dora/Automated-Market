@@ -13,7 +13,9 @@ Last edit date :
 extern "C" {
 #endif
 
-bool grasp_and_place(Vector2* i_pos, Vector3* size, Vector3* o_pos);
+bool grasp_and_place(double* i_pos, double* size, double* o_pos);
+
+bool grasp2_and_place(double* i_pos, double* size, double* o_pos);
 
 #ifdef __cplusplus
 }
