@@ -1115,7 +1115,19 @@ int main(int argc, char** argv)
     int if_finish_tag = 0;
     /*--------------------------------------------------------------------------------------------------------------*/
 
-
+    for (int file = 1; file < 5; ++file)
+    {
+        char filename[20];
+        snprintf(filename, sizeof(filename), "../%d.txt", file);
+        if (remove(filename) == 0)
+        {
+            printf("remove %s\n", filename);
+        }
+        else
+        {
+            perror("remove");
+        }
+    }
 
     /*----------------------------------------------scanf------------------------------------------------------------*/
 
