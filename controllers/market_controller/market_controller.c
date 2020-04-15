@@ -49,11 +49,8 @@ void struct_read_file(int n, Command* tk)
     while (!(fp = fopen(filename, "r")))
     {
         if (count == 0) {
-<<<<<<< HEAD
-            printf("%s still not exists!\n", filename);
-=======
+
             printf("Waiting for task %d\n", n);
->>>>>>> 6c4d1c64933f563f9389b453249033c41c79f6d4
             count++;
         }
         step();
@@ -103,29 +100,12 @@ int main(int argc, char** argv) {
         step();
         int i = 1;
         Command* buf = (Command*)malloc(sizeof(Command));
-        char* filename[20];
-        for (int i = 1; i <= 4; i++) {
-            //sprintf(filename, "%d.txt", i);
-            //printf("%s", filename);
-            //while (access(filename, 0) != 0) {
-            //    if (print == 0) {
-            //        printf("Command waiting...\n");
-            //        print++;
-            //    }
-            //}
-            
-            //printf("Command received.\n");
 
-            /* read current packet's data */
+        for (int i = 1; i <= 4; i++) {
             struct_read_file(i, buf);
-            /* Command* command = (Command*)p;*/
             printf("ix = %f\n", buf->i_pos[0]);
             if (grasp_and_place(buf->i_pos, buf->size, buf->o_pos)) {
                 wait++;
-<<<<<<< HEAD
-                
-=======
->>>>>>> 6c4d1c64933f563f9389b453249033c41c79f6d4
             }
             else {
                 perror("Grasp failed!\n");
