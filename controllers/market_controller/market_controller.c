@@ -44,7 +44,7 @@ void struct_read_file(int n, Command* tk)
     char c;
     char filename[100];
     char buf[100];
-    snprintf(filename, sizeof(filename), "../%d.txt", n);
+    snprintf(filename, sizeof(filename), "D:\\%d.txt", n);
     FILE* fp;
     while (!(fp = fopen(filename, "r")))
     {
@@ -52,6 +52,7 @@ void struct_read_file(int n, Command* tk)
             printf("%s still not exists!\n", filename);
             count++;
         }
+        step();
     }
     printf("%s found.\n", filename);
     fscanf(fp, "%lf %lf %lf %lf %lf %lf %lf %lf", 

@@ -1,14 +1,9 @@
-﻿  market_controller.c
-D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\market_controller.c(46,10): warning C4101: 'buf': unreferenced local variable
-D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\market_controller.c(44,10): warning C4101: 'c': unreferenced local variable
-D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\market_controller.c(82,23): warning C4013: 'wb_receiver_enable' undefined; assuming extern returning int
-D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\market_controller.c(85,47): warning C4013: 'wb_emitter_get_channel' undefined; assuming extern returning int
-D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\market_controller.c(87,31): warning C4013: 'wb_emitter_set_channel' undefined; assuming extern returning int
-D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\market_controller.c(89,28): warning C4013: 'wb_receiver_set_channel' undefined; assuming extern returning int
-D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\market_controller.c(101,15): warning C4101: 'filename': unreferenced local variable
+﻿  base.c
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\base.c(97,33): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\base.c(99,41): warning C4244: 'function': conversion from 'double' to 'int', possible loss of data
   Generating code
-  2 of 53 functions ( 3.8%) were compiled, the rest were copied from previous compilation.
+  1 of 53 functions ( 1.9%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   market_controller.vcxproj -> D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\market_controller.exe

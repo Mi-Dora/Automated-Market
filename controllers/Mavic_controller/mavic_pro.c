@@ -136,18 +136,18 @@ static double initializelist[7][3] = { {0.143,0.031,0.031},{0.115,0.045,0.045},
 void struct_file_write(int n, Trans2Youbot tk)
 {
     char filename[10];
-    snprintf(filename, sizeof(filename), "D:\\Git\\Market\\controllers\\%d.txt", n);
-    FILE* fp = fopen(filename, "w");
+    snprintf(filename, sizeof(filename), "D:\\%d.txt", n);
+    FILE* fp = fopen(filename, "w+");
     if (!fp)
     {
         printf("fail to open the file!\n");
         exit(-1);
     }
-    fprintf(fp,"%f %f ", tk.i_pos[0],tk.i_pos[1]);
+    fprintf(fp,"%lf %lf ", tk.i_pos[0],tk.i_pos[1]);
     //fprintf(fp, "\n");
-    fprintf(fp, "%f %f %f ", tk.i_size[0], tk.i_size[1], tk.i_size[2]);
+    fprintf(fp, "%lf %lf %lf ", tk.i_size[0], tk.i_size[1], tk.i_size[2]);
     //fprintf(fp, "\n");
-    fprintf(fp, "%f %f %f", tk.o_pos[0], tk.o_pos[1], tk.o_pos[2]);
+    fprintf(fp, "%lf %lf %lf", tk.o_pos[0], tk.o_pos[1], tk.o_pos[2]);
     //fprintf(fp, "\n");
     fclose(fp);
 }
@@ -169,13 +169,13 @@ void shelf_add(const double* gps_position)
             {
                 double cell_position_min = -1.0 + 0.25 * cell;
                 double cell_position_max = -1.0 + 0.25 * (cell + 1.0);
-                if (fabs(gps_position[2]) > cell_position_min && fabs(gps_position[2]) < cell_position_max)
+                if (gps_position[2] > cell_position_min && gps_position[2] < cell_position_max)
                 {
-                    if (gps_position[1] > 0 && gps_position[1] <= 0.4)
+                    if (gps_position[1] > 0 && gps_position[1] <= 0.2)
                     {
                         shelf[0][cell][0] = true;
                     }
-                    if (gps_position[1] > 0.4 && gps_position[1] < 0.6)
+                    if (gps_position[1] > 0.2 && gps_position[1] < 0.6)
                     {
                         shelf[0][cell][1] = true;
                     }
@@ -191,13 +191,13 @@ void shelf_add(const double* gps_position)
             {
                 double cell_position_min = -1.0 + 0.25 * cell;
                 double cell_position_max = -1.0 + 0.25 * (cell + 1.0);
-                if (fabs(gps_position[0]) > cell_position_min && fabs(gps_position[0]) < cell_position_max)
+                if (gps_position[0] > cell_position_min && gps_position[0] < cell_position_max)
                 {
-                    if (gps_position[1] > 0 && gps_position[1] <= 0.2)
+                    if (gps_position[1] > 0 && gps_position[1] <= 0.4)
                     {
                         shelf[1][cell][0] = true;
                     }
-                    if (gps_position[1] > 0.2 && gps_position[1] < 0.6)
+                    if (gps_position[1] > 0.4 && gps_position[1] < 0.8)
                     {
                         shelf[1][cell][1] = true;
                     }
@@ -213,13 +213,13 @@ void shelf_add(const double* gps_position)
             {
                 double cell_position_min = -1.0 + 0.25 * cell;
                 double cell_position_max = -1.0 + 0.25 * (cell + 1.0);
-                if (fabs(gps_position[2]) > cell_position_min && fabs(gps_position[2]) < cell_position_max)
+                if (gps_position[2] > cell_position_min && gps_position[2] < cell_position_max)
                 {
-                    if (gps_position[1] > 0 && gps_position[1] <= 0.4)
+                    if (gps_position[1] > 0 && gps_position[1] <= 0.2)
                     {
                         shelf[2][cell][0] = true;
                     }
-                    if (gps_position[1] > 0.4 && gps_position[1] < 0.8)
+                    if (gps_position[1] > 0.2 && gps_position[1] < 0.6)
                     {
                         shelf[2][cell][1] = true;
                     }
@@ -235,13 +235,13 @@ void shelf_add(const double* gps_position)
             {
                 double cell_position_min = -1.0 + 0.25 * cell;
                 double cell_position_max = -1.0 + 0.25 * (cell + 1.0);
-                if (fabs(gps_position[0]) > cell_position_min && fabs(gps_position[0]) < cell_position_max)
+                if (gps_position[0] > cell_position_min && gps_position[0] < cell_position_max)
                 {
-                    if (gps_position[1] > 0 && gps_position[1] <= 0.2)
+                    if (gps_position[1] > 0 && gps_position[1] <= 0.4)
                     {
                         shelf[3][cell][0] = true;
                     }
-                    if (gps_position[1] > 0.2 && gps_position[1] < 0.6)
+                    if (gps_position[1] > 0.4 && gps_position[1] < 0.6)
                     {
                         shelf[3][cell][1] = true;
                     }
@@ -271,54 +271,54 @@ void bool2cor(Vector3* pos, int x, int y, int z)
     {
         if (x == 0)
         {
-            z1 = 2.0 - 0.25 / 2.0;
-            x1 = -0.875 + y * 0.25;
-            y1 = 0.2;
-        }
-        if (x == 2)
-        {
-            z1 = -2.0 + 0.25 / 2.0;
-            x1 = -0.875 + y * 0.25;
-            y1 = 0.2;
-        }
-        if (x == 1)
-        {
             x1 = 2.0 - 0.25 / 2.0;
             z1 = -0.875 + y * 0.25;
             y1 = 0.1;
         }
-        if (x == 3)
+        if (x == 2)
         {
             x1 = -2.0 + 0.25 / 2.0;
             z1 = -0.875 + y * 0.25;
             y1 = 0.1;
+        }
+        if (x == 1)
+        {
+            z1 = 2.0 - 0.25 / 2.0;
+            x1 = -0.875 + y * 0.25;
+            y1 = 0.2;
+        }
+        if (x == 3)
+        {
+            z1 = -2.0 + 0.25 / 2.0;
+            x1 = -0.875 + y * 0.25;
+            y1 = 0.2;
         }
     }
     if (z == 1)
     {
         if (x == 0)
         {
-            z1 = 2.0 - 0.25 / 2.0;
-            y1 = 0.5;
-            x1 = -2.0 + 0.25 / 2.0;
-        }
-        if (x == 2)
-        {
-            z1 = -2.0 + 0.25 / 2.0;
-            y1 = 0.6;
-            x1 = -2.0 + 0.25 / 2.0;
-        }
-        if (x == 1)
-        {
             x1 = 2.0 - 0.25 / 2.0;
             y1 = 0.4;
             z1 = -0.875 + y * 0.25;
         }
+        if (x == 2)
+        {
+            z1 = -0.875 + y * 0.25;
+            y1 = 0.4;
+            x1 = -2.0 + 0.25 / 2.0;
+        }
+        if (x == 1)
+        {
+            z1 = 2.0 - 0.25 / 2.0;
+            y1 = 0.6;
+            x1 = -0.875 + y * 0.25;
+        }
         if (x == 3)
         {
-            x1 = -2.0 + 0.25 / 2.0;
-            y1 = 0.4;
-            z1 = -0.875 + y * 0.25;
+            z1 = -2.0 + 0.25 / 2.0;
+            y1 = 0.5;
+            x1 = -0.875 + y * 0.25;
         }
     }
     pos->u = x1;
@@ -353,9 +353,9 @@ void output_shelf(bool shelf_array[][8][2])
 }
 
 /*-----------------------------------------------decide region------------------------------------------------------*/
-int region(double x, double z)
+int region(double x, double z)             //no problem
 {
-    int num_region = 0;
+    int num_region;
     if (x > fabs(z))
     {
         num_region = 0;
@@ -373,9 +373,9 @@ int region(double x, double z)
         num_region = 3;
     }
     return num_region;
-}
+}  
 
-bool region_find(Vector2* p, double x, double z, int r)
+bool region_find(Vector2* p, double x, double z, int r)  
 {
     bool judge = false;
     int re = region(x, z);
@@ -1168,7 +1168,7 @@ int main(int argc, char** argv)
             //  printf("1: %f\n", ob_list[if_finish_tag - 1].o_pos[2]);
             //  printf("1: %f\n", ob_list[if_finish_tag - 1].o_pos[1]);
             f1 = true;
-            struct_file_write(2, ob_list[0]);
+            struct_file_write(1, ob_list[0]);
            // int stri;
           //  for (stri = 0; stri < 2; ++stri)
           //  {
