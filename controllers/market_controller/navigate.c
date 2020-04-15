@@ -6,6 +6,15 @@ Last edit date :
 */
 
 #include "navigate.h"
+#define LEFT 1
+#define RIGHT -1
+
+double PID(double err);
+double Kp = 0.5;
+double Ki = 0.01;
+double Kd = 0.01;
+double last_err = 0.0;
+double llast_err = 0.0;
 
 // may be revised
 static double tf_pts[4][2] = {{ 1.1,  1.1},   // between 0 1
@@ -53,8 +62,11 @@ static double get_alpha() {
 
     // compute absolute angle & delta with the delta with the target angle
     double theta = vector2_angle(&v_front, &v_north);
-    return theta;
+    // clockwise increase
+    return theta; // should be in (-pi, pi)
 }
+
+
 
 int get_partition(double x, double z) {
     if(x >= fabs(z)) {
@@ -373,7 +385,7 @@ void go_to_translation(double ox, double oz, int status) {
         if (status == 1)
             alpha = 0;
         else
-            alpha = -M_PI;
+            alpha = M_PI;
         ox -= status * (offset + DIS_APPROACH);
 
     }
@@ -411,6 +423,8 @@ void go_to_translation(double ox, double oz, int status) {
     double ix = gps_raw_values[0];
     double iz = gps_raw_values[2];
     go_to(ox, oz, cur_alpha);
+    //turning(alpha);
+    //passive_wait(1.0);
     go_to(ox, oz, alpha);
     // approach from the radial direction
     //go_to(target_x, target_z, alpha);
@@ -502,4 +516,64 @@ void backup(double distance) {
 
 }
 
+void turning(double alpha) {
+    if (alpha < 0) {
+        alpha += 2 * M_PI;
+    }
+    double cur_alpha;
+    double delta;
+    int dir;
+    double k = 0.0;
+    do {
+        step();
+        cur_alpha = get_alpha();
+        if (cur_alpha < 0) {
+            cur_alpha += 2 * M_PI;
+        }
+        delta = alpha - cur_alpha;
+        // delta > 0 turn right
 
+        //if (delta > M_PI) {
+        //    delta = delta - 2 * M_PI;
+        //}
+        //k -= PID(delta);
+        //k = bound(k, -0.5, 0.5);
+        //base_set_turn_speed(k);
+
+
+        if (fabs(delta) > M_PI) {
+            if (delta > 0) {
+                dir = LEFT;
+                //delta = delta - 2 * M_PI;
+            }
+            else {
+                dir = RIGHT;
+                //delta = 2 * M_PI + delta;
+            }
+
+            //delta = 2 * M_PI - fabs(delta);
+        }
+        else {
+            if (delta > 0) {
+                dir = RIGHT;
+            }
+            else {
+                dir = LEFT;
+            }
+        }
+
+        if (dir == LEFT) {
+            base_set_turn_speed(0.5);
+        }
+        else {
+            base_set_turn_speed(-0.5);
+        }
+    } while (fabs(delta) > 0.005);
+    base_reset();
+}
+
+
+double PID(double err) {
+    double delta = Kp * (err - last_err) + Ki * err + Kd * (err - 2 * last_err + llast_err);
+    return delta;
+}

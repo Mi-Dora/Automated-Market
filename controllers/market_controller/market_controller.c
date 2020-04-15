@@ -44,12 +44,16 @@ void struct_read_file(int n, Command* tk)
     char c;
     char filename[100];
     char buf[100];
-    snprintf(filename, sizeof(filename), "D:\\%d.txt", n);
+    snprintf(filename, sizeof(filename), "../%d.txt", n);
     FILE* fp;
     while (!(fp = fopen(filename, "r")))
     {
         if (count == 0) {
+<<<<<<< HEAD
             printf("%s still not exists!\n", filename);
+=======
+            printf("Waiting for task %d\n", n);
+>>>>>>> 6c4d1c64933f563f9389b453249033c41c79f6d4
             count++;
         }
         step();
@@ -118,7 +122,10 @@ int main(int argc, char** argv) {
             printf("ix = %f\n", buf->i_pos[0]);
             if (grasp_and_place(buf->i_pos, buf->size, buf->o_pos)) {
                 wait++;
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 6c4d1c64933f563f9389b453249033c41c79f6d4
             }
             else {
                 perror("Grasp failed!\n");

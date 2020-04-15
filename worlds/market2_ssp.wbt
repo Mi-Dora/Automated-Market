@@ -11,7 +11,7 @@ WorldInfo {
       coulombFriction [
         1.8, 0, 0.2
       ]
-      frictionRotation -0.865 0
+      frictionRotation -0.665 0
       bounce 0
       forceDependentSlip [
         10, 0
@@ -22,7 +22,7 @@ WorldInfo {
       coulombFriction [
         1.8, 0, 0.2
       ]
-      frictionRotation 0.865 0
+      frictionRotation 0.665 0
       bounce 0
       forceDependentSlip [
         10, 0
@@ -31,11 +31,10 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.1314360941538868 -0.9403101313393709 -0.3139130612989936 3.7143559576034706
-  position 2.343341947942692 3.974393891075472 -3.856500138907335
+  orientation 0.05027196898863145 -0.8835702884881816 -0.4655923908687915 3.2090989221070587
+  position 0.6047123660989927 4.857177146191939 -2.984750685993605
   near 0.2
   follow "Mavic 2 PRO:Pioneer3 gripper"
-  followType "None"
   followSmoothness 0.2
 }
 Background {
@@ -108,7 +107,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
               ]
             }
             roughness 0.25
@@ -173,7 +172,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
               ]
             }
             roughness 0.25
@@ -238,7 +237,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
               ]
             }
             roughness 0.25
@@ -303,7 +302,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
               ]
             }
             roughness 0.25
@@ -368,7 +367,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
               ]
             }
             roughness 0.25
@@ -433,7 +432,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
               ]
             }
             roughness 0.25
@@ -498,7 +497,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
               ]
             }
             roughness 0.25
@@ -563,7 +562,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
               ]
             }
             roughness 0.25
@@ -628,7 +627,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_1.jpg"
               ]
             }
             roughness 0.25
@@ -691,7 +690,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/blue_jar_lid.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/blue_jar_lid.jpg"
           ]
         }
         roughness 0.1
@@ -721,12 +720,12 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/jam_jar.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/jam_jar.jpg"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/jam_jar_roughness.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/jam_jar_roughness.jpg"
           ]
         }
         metalness 0
@@ -790,7 +789,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/blue_jar_lid.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/blue_jar_lid.jpg"
           ]
         }
         roughness 0.1
@@ -820,12 +819,12 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/jam_jar.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/jam_jar.jpg"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/jam_jar_roughness.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/jam_jar_roughness.jpg"
           ]
         }
         metalness 0
@@ -881,7 +880,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/blue_jar_lid.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/blue_jar_lid.jpg"
           ]
         }
         roughness 0.1
@@ -911,12 +910,12 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/jam_jar.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/jam_jar.jpg"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/jam_jar_roughness.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/jam_jar_roughness.jpg"
           ]
         }
         metalness 0
@@ -972,7 +971,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/blue_jar_lid.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/blue_jar_lid.jpg"
           ]
         }
         roughness 0.1
@@ -1002,12 +1001,12 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/jam_jar.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/jam_jar.jpg"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/jam_jar_roughness.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/jam_jar_roughness.jpg"
           ]
         }
         metalness 0
@@ -1063,7 +1062,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/blue_jar_lid.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/blue_jar_lid.jpg"
           ]
         }
         roughness 0.1
@@ -1093,12 +1092,12 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/jam_jar.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/jam_jar.jpg"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/jam_jar_roughness.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/jam_jar_roughness.jpg"
           ]
         }
         metalness 0
@@ -1172,7 +1171,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/bee_lid.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/bee_lid.jpg"
           ]
         }
         roughness 0.1
@@ -1258,7 +1257,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/bee_lid.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/bee_lid.jpg"
           ]
         }
         roughness 0.1
@@ -1332,7 +1331,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/bee_lid.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/bee_lid.jpg"
           ]
         }
         roughness 0.1
@@ -1406,7 +1405,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/bee_lid.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/bee_lid.jpg"
           ]
         }
         roughness 0.1
@@ -1480,7 +1479,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/bee_lid.jpg"
+            "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/bee_lid.jpg"
           ]
         }
         roughness 0.1
@@ -1536,13 +1535,13 @@ DEF soda Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -1591,13 +1590,13 @@ DEF soda Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -1646,22 +1645,22 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_base_color.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_base_color.png"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
           ]
         }
         metalnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
           ]
         }
         normalMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_normal.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_normal.jpg"
           ]
         }
       }
@@ -1748,7 +1747,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/evian.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/evian.png"
           ]
         }
         roughness 0.15
@@ -1846,7 +1845,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/evian.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/evian.png"
           ]
         }
         roughness 0.15
@@ -1944,7 +1943,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/evian.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/evian.png"
           ]
         }
         roughness 0.15
@@ -2042,7 +2041,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/evian.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/evian.png"
           ]
         }
         roughness 0.15
@@ -2140,7 +2139,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/evian.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/evian.png"
           ]
         }
         roughness 0.15
@@ -2238,7 +2237,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/evian.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/evian.png"
           ]
         }
         roughness 0.15
@@ -2336,7 +2335,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/evian.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/evian.png"
           ]
         }
         roughness 0.15
@@ -2440,7 +2439,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
               ]
             }
             roughness 0.25
@@ -2505,7 +2504,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
               ]
             }
             roughness 0.25
@@ -2568,7 +2567,7 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/evian.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/evian.png"
           ]
         }
         roughness 0.15
@@ -2670,22 +2669,22 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_base_color.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_base_color.png"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
           ]
         }
         metalnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
           ]
         }
         normalMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_normal.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_normal.jpg"
           ]
         }
       }
@@ -2772,22 +2771,22 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_base_color.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_base_color.png"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
           ]
         }
         metalnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
           ]
         }
         normalMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_normal.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_normal.jpg"
           ]
         }
       }
@@ -2874,22 +2873,22 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_base_color.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_base_color.png"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
           ]
         }
         metalnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
           ]
         }
         normalMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_normal.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_normal.jpg"
           ]
         }
       }
@@ -2976,22 +2975,22 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_base_color.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_base_color.png"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
           ]
         }
         metalnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
           ]
         }
         normalMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_normal.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_normal.jpg"
           ]
         }
       }
@@ -3078,22 +3077,22 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_base_color.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_base_color.png"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
           ]
         }
         metalnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
           ]
         }
         normalMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_normal.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_normal.jpg"
           ]
         }
       }
@@ -3180,22 +3179,22 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_base_color.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_base_color.png"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
           ]
         }
         metalnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
           ]
         }
         normalMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_normal.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_normal.jpg"
           ]
         }
       }
@@ -3282,22 +3281,22 @@ Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_base_color.png"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_base_color.png"
           ]
         }
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_roughness.jpg"
           ]
         }
         metalnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_metalness.jpg"
           ]
         }
         normalMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/heineken_normal.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/heineken_normal.jpg"
           ]
         }
       }
@@ -3388,13 +3387,13 @@ DEF bear Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -3443,13 +3442,13 @@ DEF bear Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -3498,13 +3497,13 @@ DEF bear Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -3553,13 +3552,13 @@ DEF bear Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -3608,13 +3607,13 @@ DEF bear Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -3663,13 +3662,13 @@ DEF bear Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -3718,13 +3717,13 @@ DEF bear Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -3773,13 +3772,13 @@ DEF beer Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_beer_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -3862,13 +3861,13 @@ DEF soda Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -3917,13 +3916,13 @@ DEF soda Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -3972,13 +3971,13 @@ DEF soda Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -4027,13 +4026,13 @@ DEF soda Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -4082,13 +4081,13 @@ DEF soda Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -4241,7 +4240,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
               ]
             }
             roughness 0.25
@@ -4306,7 +4305,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
               ]
             }
             roughness 0.25
@@ -4371,7 +4370,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
               ]
             }
             roughness 0.25
@@ -4436,7 +4435,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
               ]
             }
             roughness 0.25
@@ -4501,7 +4500,7 @@ Solid {
           appearance PBRAppearance {
             baseColorMap ImageTexture {
               url [
-                "D:/Program Files/Webots/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
+                "D:/Webots2020/projects/objects/kitchen/breakfast/protos/textures/cereal_box_2.jpg"
               ]
             }
             roughness 0.25
@@ -4582,13 +4581,13 @@ DEF soda Solid {
       appearance PBRAppearance {
         baseColorMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_base_color.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_base_color.jpg"
           ]
         }
         roughness 0.2
         roughnessMap ImageTexture {
           url [
-            "D:/Program Files/Webots/projects/objects/drinks/protos/textures/can_roughness.jpg"
+            "D:/Webots2020/projects/objects/drinks/protos/textures/can_roughness.jpg"
           ]
         }
         metalness 0.8
@@ -4702,12 +4701,13 @@ Mavic2Pro {
   ]
 }
 Robot {
-  translation -1.50254 0.104567 1.44917
+  translation -1.55407 0.104804 1.55316
   rotation 1 0 0 -1.5708
   children [
     Group {
       children [
         Emitter {
+          channel 1
         }
       ]
     }
@@ -4784,7 +4784,7 @@ Robot {
             baseColor 0.8 0.8 0.8
             baseColorMap ImageTexture {
               url [
-                "D:/Git/Market_final/Automated-Market/protos/textures/kuka_alpha.png"
+                ""
               ]
             }
             roughness 0.6
@@ -4844,13 +4844,13 @@ Robot {
               appearance PBRAppearance {
                 baseColorMap ImageTexture {
                   url [
-                    "D:/Webots2020/projects/devices/microsoft/protos/textures/kinect.jpg"
+                    ""
                   ]
                 }
                 roughness 0.1
                 roughnessMap ImageTexture {
                   url [
-                    "D:/Webots2020/projects/devices/microsoft/protos/textures/kinect_roughness.jpg"
+                    ""
                   ]
                 }
                 metalness 0
@@ -4986,7 +4986,7 @@ Robot {
                       baseColor 0.8 0.8 0.8
                       baseColorMap ImageTexture {
                         url [
-                          "D:/Git/Market_final/Automated-Market/protos/textures/kuka_black.png"
+                          ""
                         ]
                       }
                       roughness 0.6
@@ -5139,7 +5139,7 @@ Robot {
                                   baseColor 0.8 0.8 0.8
                                   baseColorMap ImageTexture {
                                     url [
-                                      "D:/Git/Market_final/Automated-Market/protos/textures/kuka_black.png"
+                                      ""
                                     ]
                                   }
                                   roughness 0.6
@@ -5222,7 +5222,7 @@ Robot {
                                         baseColor 0.8 0.8 0.8
                                         baseColorMap ImageTexture {
                                           url [
-                                            "D:/Git/Market_final/Automated-Market/protos/textures/kuka_black.png"
+                                            ""
                                           ]
                                         }
                                         roughness 0.6
@@ -5264,13 +5264,8 @@ Robot {
                                     }
                                   ]
                                   endPoint DEF GRIPPER_BASE Solid {
-<<<<<<< HEAD
-                                    translation 9.609509991390067e-08 -1.6487300501821027e-08 0.07
-                                    rotation 0.7071067830325425 0.7071067793399302 9.38185706214653e-07 3.14159
-=======
-                                    translation 9.609509991390081e-08 -1.6487300501821067e-08 0.07
-                                    rotation 0.7071067830325426 0.7071067793399302 9.381857062146536e-07 3.14159
->>>>>>> 6c4d1c64933f563f9389b453249033c41c79f6d4
+                                    translation 9.609509991390072e-08 -1.648730050182105e-08 0.07
+                                    rotation 0.7071067830325426 0.70710677933993 9.381857062146536e-07 3.14159
                                     children [
                                       DEF LIFT_SLIDER SliderJoint {
                                         jointParameters JointParameters {
@@ -5357,7 +5352,7 @@ Robot {
                                                 }
                                               ]
                                               endPoint DEF RIGHT_FINGER Solid {
-                                                translation 0.02199999999999998 0 -0.02
+                                                translation 0.021999999999999978 0 -0.02
                                                 children [
                                                   Group {
                                                     children [
@@ -6590,7 +6585,7 @@ Robot {
       }
     }
   ]
-  name "youBot1(1)"
+  name "youBot1"
   model "KUKA youBot"
   description "KUKA youBot"
   boundingObject Group {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  market_controller.c
 D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(46,10): warning C4101: “buf”: 未引用的局部变量
 D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.c(44,10): warning C4101: “c”: 未引用的局部变量
@@ -12,3 +13,21 @@ D:\Git\Market_final\Automated-Market\controllers\market_controller\market_contro
     3 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   market_controller.vcxproj -> D:\Git\Market_final\Automated-Market\controllers\market_controller\market_controller.exe
+=======
+﻿  navigate.c
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(290,18): warning C4098: 'go_to_point': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(294,18): warning C4098: 'go_to_point': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(316,17): warning C4098: 'go_to_point': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(344,13): warning C4098: 'go_to_point': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(359,18): warning C4098: 'go_to_translation': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(363,18): warning C4098: 'go_to_translation': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(399,17): warning C4098: 'go_to_translation': 'void' function returning a value
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(441,36): warning C4552: '-': result of expression not used
+D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\navigate.c(460,18): warning C4098: 'approach': 'void' function returning a value
+  Generating code
+  1 of 53 functions ( 1.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  market_controller.vcxproj -> D:\Mi-Dora\Source\Webots\Automated-Market\controllers\market_controller\market_controller.exe
+>>>>>>> 6c4d1c64933f563f9389b453249033c41c79f6d4

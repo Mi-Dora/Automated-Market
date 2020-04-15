@@ -136,7 +136,7 @@ static double initializelist[7][3] = { {0.143,0.031,0.031},{0.115,0.045,0.045},
 void struct_file_write(int n, Trans2Youbot tk)
 {
     char filename[10];
-    snprintf(filename, sizeof(filename), "D:\\%d.txt", n);
+    snprintf(filename, sizeof(filename), "../%d.txt", n);
     FILE* fp = fopen(filename, "w+");
     if (!fp)
     {

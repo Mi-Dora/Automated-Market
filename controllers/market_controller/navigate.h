@@ -42,6 +42,8 @@ void go_to_point(double ox, double oz);
 void go_to_translation(double ox, double oz, int status);
 void approach(double depth, double height, int status);
 void backup(double distance);
+void turning(double alpha);
+
 
 
 #ifdef __cplusplus

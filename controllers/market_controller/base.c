@@ -22,7 +22,7 @@
 #include "base.h"
 
 
-#define SPEED 4.0
+#define SPEED 10.0
 #define DISTANCE_TOLERANCE 0.001
 #define ANGLE_TOLERANCE 0.001
 
@@ -81,7 +81,7 @@ void base_turn_right() {
 }
 
 void base_strafe_left() {
-  static double speeds[4] = {SPEED, -SPEED, -SPEED, SPEED};
+  static double speeds[4] = { SPEED, -SPEED, -SPEED, SPEED};
   base_set_wheel_speeds_helper(speeds);
 }
 
@@ -192,4 +192,12 @@ void base_goto_run() {
 
 bool base_goto_reached() {
   return goto_data.reached;
+}
+
+
+void base_set_turn_speed(double k) {
+    // v > 0 turn left
+    // v < 0 turn right
+    double speeds[4] = { -k * SPEED, k * SPEED, -k * SPEED, k * SPEED };
+    base_set_wheel_speeds_helper(speeds);
 }
